@@ -1,0 +1,21 @@
+---
+title: {{.Title}}
+date: {{.Date}}
+featured_image: {{.Image}}
+slug: {{ .Slug }}
+layout: gallery
+tags:
+  - photo
+category:
+  - photo
+summary: {{.Title}}
+author: yamadatt
+draft: false
+---
+
+{{ "{{< gallery >}}" }}
+
+{{ range .Files }}![]({{ . }})
+{{ end }}
+
+{{ "{{< /gallery >}}" }}
